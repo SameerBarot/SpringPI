@@ -9,51 +9,32 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table" style="width: 100%; border-collapse: collapse; background: linear-gradient(to right, #667db6, #0082c8, #0082c8, #667db6);">
+    <thead style="background-color: rgba(255, 255, 255, 0.9);">
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Room)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Brand)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Colour)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th></th>
+            <th style="padding: 8px; border: 1px solid #dee2e6;">@Html.DisplayNameFor(model => model.Room)</th>
+            <th style="padding: 8px; border: 1px solid #dee2e6;">@Html.DisplayNameFor(model => model.Type)</th>
+            <th style="padding: 8px; border: 1px solid #dee2e6;">@Html.DisplayNameFor(model => model.Brand)</th>
+            <th style="padding: 8px; border: 1px solid #dee2e6;">@Html.DisplayNameFor(model => model.Colour)</th>
+            <th style="padding: 8px; border: 1px solid #dee2e6;">@Html.DisplayNameFor(model => model.Price)</th>
+            <th style="padding: 8px; border: 1px solid #dee2e6;"></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Room)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Colour)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Price)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.Select((value, index) => new { Value = value, Index = index }))
+        {
+            <tr style="background-color: @(item.Index % 2 == 0 ? "rgba(255, 255, 255, 0.9)" : "rgba(255, 255, 255, 0.8)");">
+                <td style="padding: 8px; border: 1px solid #dee2e6;">@Html.DisplayFor(modelItem => item.Value.Room)</td>
+                <td style="padding: 8px; border: 1px solid #dee2e6;">@Html.DisplayFor(modelItem => item.Value.Type)</td>
+                <td style="padding: 8px; border: 1px solid #dee2e6;">@Html.DisplayFor(modelItem => item.Value.Brand)</td>
+                <td style="padding: 8px; border: 1px solid #dee2e6;">@Html.DisplayFor(modelItem => item.Value.Colour)</td>
+                <td style="padding: 8px; border: 1px solid #dee2e6;">@Html.DisplayFor(modelItem => item.Value.Price)</td>
+                <td style="padding: 8px; border: 1px solid #dee2e6;">
+                    <a asp-action="Edit" asp-route-id="@item.Value.Id" style="color: #007bff; text-decoration: none;">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Value.Id" style="color: #007bff; text-decoration: none;">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Value.Id" style="color: #dc3545; text-decoration: none;">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
