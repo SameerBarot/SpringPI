@@ -85,3 +85,4 @@ After making the necessary adjustments to the program.cs file, we were able to o
 0750
 	we tried to Add search option.
 	try to solve error other 2 team members cannot see database.
+	we are trying to solve the issue
