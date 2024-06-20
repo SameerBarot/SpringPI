@@ -20,3 +20,9 @@ html {
 body {
   margin-bottom: 60px;
 }
+body {
+    background-image: url('/Images/BGimage.jpg');
+    background-size: cover; /* This makes sure the image covers the entire background */
+    background-repeat: no-repeat; /* This prevents the image from repeating */
+    background-position: center center; /* This centers the image */
+}
