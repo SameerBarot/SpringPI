@@ -157,7 +157,7 @@ namespace SpringPI.Controllers
 
         private bool FurnitureExists(int id)
         {
-          return (_context.Furniture?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Furniture?.Any(e => e.Id == id)).GetValueOrDefault(); 
         }
     }
 }
