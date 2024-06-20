@@ -94,4 +94,4 @@ Finally uploaded the images for our application
 
 1420
 We also added a link in our About Us to tell about our application
-we included 
+we included a image and a logo in our About Us
