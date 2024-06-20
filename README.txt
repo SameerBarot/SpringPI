@@ -74,7 +74,7 @@ Migration file: 20240620121239_InitialCreate.cs
 
 
 2024-06-19
-0640
+1150
 Created database
 
 We started this task by using the SQL Server Object Explorer to look over the database. 
@@ -82,7 +82,22 @@ This made it possible for us to obtain the table we had built in the earlier pha
 Next, we looked over and made some changes to include drawer information on the output webpage. 
 After making the necessary adjustments to the program.cs file, we were able to obtain the desired output. 
 
-0750
+1230
 	we tried to Add search option.
 	try to solve error other 2 team members cannot see database.
 	we are trying to solve the issue
+
+1400
+We have uploaded images as backgroud for our application
+got some errors while uploading images 
+Finally uploaded the images for our application
+
+1420
+We also added a link in our About Us to tell about our application
+we included a image and a logo in our About Us
+
+1510
+Attempted to add Admin view. Encountering the following errors:
+'HttpRequest' does not contain a definition for 'Url' and no accessible extension method 'Url' accepting a first argument of type 'HttpRequest' could be found (are you missing a using directive or an assembly reference?)	
+'IUrlHelper' does not contain a definition for 'HttpRouteUrl' and no accessible extension method 'HttpRouteUrl' accepting a first argument of type 'IUrlHelper' could be found (are you missing a using directive or an assembly reference?)
+
