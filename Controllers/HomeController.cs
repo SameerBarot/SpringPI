@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SpringPI.Models;
 using System.Diagnostics;
+using System.Web;
 
 namespace SpringPI.Controllers
 {
@@ -30,7 +31,7 @@ namespace SpringPI.Controllers
         }
         public ActionResult Admin()
         {
-            bool apiUri = Url.HttpRouteUrl("DefaultApi", new { controller = "admin", });
+            bool apiUri = Url.RouteUrl("DefaultApi", new { controller = "admin", });
             ViewBag.ApiUrl = new Uri(Request.Url, apiUri).AbsoluteUri.ToString();
 
             return View();
