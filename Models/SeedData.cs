@@ -20,7 +20,7 @@ public static class SeedData
                 return;   // DB has been seeded
             }
             context.Furniture.AddRange(
-                new Furniture
+                new Furniture 
                 {
                     Room = "Kitchen",
                     Type = "Countertop",
