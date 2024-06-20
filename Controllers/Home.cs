@@ -160,4 +160,11 @@ namespace SpringPI.Controllers
             return (_context.Furniture?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
+    public class AboutUs : Controller
+    { 
+    public IActionResult Index()
+    {
+        return View();
+    }
+    }
 }
