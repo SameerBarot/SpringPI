@@ -24,19 +24,22 @@ after successfully ran part 1 and moving forward to Add controllers MvcMovies>Co
 		Handle browser requests.
 		Retrieve model data.
 		Call view templates that return a response.
-	we Create new controller "MvcMovie.cs"
-	add namespace MvcMovie.controller
-	and we used public method in controller because it can handle incoming HTTP and HTTPS request.we tried other method like Private and Projected that are not meant to handle HTTP requests. 
-    from online resources private and projected methods are used for internal logic and helper functions.
+we Create new controller "MvcMovie.cs"
+add namespace MvcMovie.controller
+and we used public method in controller because it can handle incoming HTTP and HTTPS request.
+we tried other method like Private and Projected that are not meant to handle HTTP requests. 
+from online resources private and projected methods are used for internal logic and helper functions.
 
-	we Created two public string "Index" and "welcome"
-	and make sure confirm again 
+we Created two public string "Index" and "welcome"
+and make sure confirm again 
+
 2250 
 Now we tried to modify a code and pass some parameter information from the URl
-	we created Public string Welcome and add 2 parameters
-		string "name"
-		integer "numTimes"
-	and this time i used HtmlEncoder to encode protentially dangerous characters in user input,avoid XSS attacks and Java code injections.
+we created Public string Welcome and add 2 parameters
+string "name"
+integer "numTimes"
+and this time i used HtmlEncoder to encode protentially dangerous characters in user input,
+avoid XSS attacks and Java code injections.
 
 2255 (	we just started Part 3 that edit views part.)
 Added view
@@ -54,9 +57,14 @@ In the Add New Item - Furnitures dialog:
 Added model
 We created a class named Furniture.ca and added it to the models folder during this task. 
 In order to add the Furniture type, price, rating, and ratings, we also updated the code. 
-Next, we updated the controller drawer controller.cs file with the newly scaffolded item, which allowed us to add the NuGet packages. 
+Next, we updated the controller drawer controller.cs file with the newly scaffolded item, 
+which allowed us to add the NuGet packages. 
 Ultimately, we added the migration initialCreate by going to the NuGet package manager> package manager console. 
-We will test the application once the database has been created and updated, and we will look over each code once we have the required output from the automatic code that was generated during the migration process.
+We will test the application once the database has been created and updated, 
+and we will look over each code once we have the required output from 
+the automatic code that was generated during the migration process.
+
+
 >First Move
 I navigated to Tools > NuGet Package Manager > Package Manager Console to open the Package Manager Console (PMC).
 Launch the application.
@@ -76,4 +84,3 @@ After making the necessary adjustments to the program.cs file, we were able to o
 
 0750
 	we tried to Add search option.
-	solve error "it showing web server failed to listen on port 7007"

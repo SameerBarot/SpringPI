@@ -2,7 +2,10 @@
 using Microsoft.EntityFrameworkCore;
 using SpringPI.Data;
 using Microsoft.Extensions.DependencyInjection;
-
+using SpringPI.Models;
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<SpringPIContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SpringPIContext")));
 namespace SpringPI
 {
     public class Program
