@@ -95,3 +95,9 @@ Finally uploaded the images for our application
 1420
 We also added a link in our About Us to tell about our application
 we included a image and a logo in our About Us
+
+1510
+Attempted to add Admin view. Encountering the following errors:
+'HttpRequest' does not contain a definition for 'Url' and no accessible extension method 'Url' accepting a first argument of type 'HttpRequest' could be found (are you missing a using directive or an assembly reference?)	
+'IUrlHelper' does not contain a definition for 'HttpRouteUrl' and no accessible extension method 'HttpRouteUrl' accepting a first argument of type 'IUrlHelper' could be found (are you missing a using directive or an assembly reference?)
+
