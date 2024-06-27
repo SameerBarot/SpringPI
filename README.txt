@@ -104,3 +104,7 @@ Attempted to add Admin view. Encountering the following errors:
 1440	
 Resolved 'IUrlHelper' issue by changing 'HttpRouteUrl' to 'RouteUrl'
 
+2024-06-27
+1100 
+Resolved issue where due to a discrepancy between ASP.NET Core and ASP.NET MVC. In ASP.NET Core, the Request object does not have a Url property as it does in ASP.NET MVC. 
+
