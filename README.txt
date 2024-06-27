@@ -110,3 +110,6 @@ Resolved issue where due to a discrepancy between ASP.NET Core and ASP.NET MVC. 
 
 1400
 Having difficulty with issue when attempting to access the Admin link from the home page, where "The view 'Admin' was not found" despite /Views/Home/Admin.cshtml being present.
+
+1550
+Fixed Admin link, unfortunately could not get the Admin page to come up. Made some cosmetic changes to appearance of pages.
