@@ -31,10 +31,14 @@ namespace SpringPI.Controllers
         }
         public ActionResult Admin()
         {
-            bool apiUri = Url.RouteUrl("DefaultApi", new { controller = "admin", });
-            ViewBag.ApiUrl = new Uri(Request.Url, apiUri).AbsoluteUri.ToString();
+            var apiUri = Url.RouteUrl("DefaultApi", new { controller = "admin" });
+            var request = HttpContext.Request;
+            var apiUrl = new Uri(new Uri(request.Scheme + "://" + request.Host.Value), apiUri).ToString();
+
+            ViewBag.ApiUrl = apiUrl;
 
             return View();
         }
+
     }
 }
